@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string s;
+    cin>>s;
+    int l,n,sum=0;
+    char ch;
+    l=s.size();
+    for(int i=0 ; i<l ; i++)
+    {
+        if(i==0)
+        {
+            n=abs(s[i]-'a');
+            if(n>13)
+                n=26-n;
+            ch=s[0];
+        }
+        else
+        {
+            n=abs(ch-s[i]);
+            if(n>13)
+            {
+                n=26-n;
+            }
+            ch=s[i];
+        }
+        sum=sum+n;
+    }
+    cout<<sum<<endl;
+    return 0;
+}
