@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int a,b,Count=1,cal;
+    cin>>a>>b;
+    cal=a;
+    while(1)
+    {
+        if(cal%10==0 || cal%10==b)
+        {
+            break;
+        }
+        Count++;
+        cal=cal+a;
+    }
+    cout<<Count<<endl;
+    return 0;
+}
