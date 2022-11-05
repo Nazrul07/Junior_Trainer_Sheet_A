@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+   int a,b;
+   cin>>a>>b;
+   int c;
+   c=max(a,b);
+   int cal=(6-c)+1;
+   if(cal==6)
+    cout<<"1/1"<<endl;
+   else if(cal%2==0)
+    cout<<(cal/2)<<"/3"<<endl;
+   else if(cal==3)
+    cout<<"1/2"<<endl;
+   else if(cal%2!=0)
+    cout<<cal<<"/6"<<endl;
+    return 0;
+}
