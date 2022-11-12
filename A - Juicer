@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+   int n,b,d,i,a,Size=0,C=0;
+   cin>>n>>b>>d;
+   for(i=0 ; i<n ; i++)
+   {
+       cin>>a;
+       if(a<=b)
+       {
+           Size=Size+a;
+       }
+       if(Size>d)
+       {
+           C++;
+           Size=0;
+       }
+   }
+   cout<<C<<endl;
+    return 0;
+}
