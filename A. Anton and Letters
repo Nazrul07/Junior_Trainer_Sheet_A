@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+   string s;
+   getline(cin,s);
+   int l,i,sum=0;
+   l=s.size();
+   int a[26]={};
+   for(i=0 ; i<l ; i++)
+   {
+       if(s[i]>='a' && s[i]<='z')
+       {
+           a[s[i]-97]=1;
+       }
+   }
+   for(i=0 ; i<26 ; i++)
+   {
+       sum=sum+a[i];
+   }
+   cout<<sum<<endl;
+    return 0;
+}
