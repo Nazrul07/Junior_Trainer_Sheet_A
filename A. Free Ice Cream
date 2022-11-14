@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+   long long int t,x,i,total,k,count=0;
+   char c;
+   cin>>t>>x;
+   total=x;
+   for(i=0 ; i<t ; i++)
+   {
+       cin>>c;
+       cin>>k;
+       if(c=='+')
+       {
+           total+=k;
+       }
+       if(c=='-')
+       {
+           if(total>=k)
+           {
+               total-=k;
+           }
+           else
+           {
+               count++;
+           }
+       }
+   }
+   cout<<total<<" "<<count<<endl;
+    return 0;
+}
