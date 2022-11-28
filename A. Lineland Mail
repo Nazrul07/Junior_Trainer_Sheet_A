@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,Max,Min,Min1,Min2,Max1,Max2,i;
+    cin>>n;
+    int a[n+1];
+    for(i=1 ; i<=n ; i++)
+        cin>>a[i];
+    for(i=1 ; i<=n ; i++)
+    {
+        if(i==1)
+        {
+            Min=abs(a[i]-a[i+1]);
+            Max=abs(a[i]-a[n]);
+            cout<<Min<<" "<<Max<<endl;
+        }
+        else if(i==n)
+        {
+            Max=abs(a[i]-a[1]);
+            Min=abs(a[i]-a[i-1]);
+            cout<<Min<<" "<<Max<<endl;
+        }
+        else
+        {
+            Min1=abs(a[i]-a[i+1]);
+            Min2=abs(a[i]-a[i-1]);
+            Min=min(Min1,Min2);
+            Max1=abs(a[i]-a[n]);
+            Max2=abs(a[i]-a[1]);
+            Max=max(Max1,Max2);
+            cout<<Min<<" "<<Max<<endl;
+        }
+    }
+    return 0;
+}
