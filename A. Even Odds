@@ -1,0 +1,43 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long k,n,pos;
+    cin>>k>>n;
+    if(k%2==0)
+    {
+        k=k/2;
+        if(n<=k)
+        {
+            pos=2+2*(n-1);
+            pos--;
+            cout<<pos<<endl;
+            return 0;
+        }
+        else
+        {
+            n=(n-k);
+            pos=2+2*(n-1);
+            cout<<pos<<endl;
+            return 0;
+        }
+    }
+    else
+    {
+        k=(k/2)+1;
+        if(n<=k)
+        {
+            pos=2+2*(n-1);
+            pos--;
+            cout<<pos<<endl;
+            return 0;
+        }
+        else
+        {
+            n=(n-k);
+            pos=2+2*(n-1);
+            cout<<pos<<endl;
+            return 0;
+        }
+    }
+}
