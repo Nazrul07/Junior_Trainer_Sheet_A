@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int x,n,k=0,i;
+    cin>>x;
+    int arr[x+1]={};
+    int a;
+    cin>>a;
+    for(i=0 ; i<a ; i++)
+    {
+        cin>>n;
+        arr[n]=1;
+    }
+    int b;
+    cin>>b;
+    for(i=0 ; i<b ; i++)
+    {
+        cin>>n;
+        arr[n]=1;
+    }
+    for(i=1 ; i<=x ; i++)
+    {
+        if(arr[i]==0)
+        {
+            cout<<"Oh, my keyboard!"<<endl;
+            return 0;
+        }
+    }
+    cout<<"I become the guy."<<endl;
+    return 0;
+}
