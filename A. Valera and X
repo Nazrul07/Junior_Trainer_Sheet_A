@@ -1,0 +1,55 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,i,j,p=0;
+    cin>>n;
+    char arr[n][n];
+    for(i=0 ; i<n ; i++)
+    {
+        for(j=0 ; j<n ; j++)
+        {
+            cin>>arr[i][j];
+        }
+    }
+    char c=arr[0][0];
+    char cc=arr[0][1];
+    for(i=0 ; i<n ; i++)
+    {
+        if(c==cc)
+        {
+            p=1;
+            break;
+        }
+        for(j=0 ; j<n ; j++)
+        {
+            if(i==j)
+            {
+                if(arr[i][j]!=c)
+                {
+                    p=1;
+                    break;
+                }
+            }
+            else if((i+j)==(n-1))
+            {
+                if(arr[i][j]!=c)
+                {
+                    p=1;
+                    break;
+                }
+            }
+            else
+            {
+                if(arr[i][j]!=cc)
+                {
+                    p=1;
+                    break;
+                }
+            }
+        }
+    }
+    if(p==1)cout<<"NO"<<endl;
+    else cout<<"YES"<<endl;
+    return 0;
+}
