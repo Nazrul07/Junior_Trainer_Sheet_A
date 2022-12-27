@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,k=0,M,kk=0,i;
+    cin>>n;
+    int arr[n],ar[n];
+    for(i=0 ; i<n ; i++)
+    {
+        int a,b;
+        cin>>a>>b;
+        if(a!=b)
+        {
+            k=1;
+        }
+        arr[i]=a;
+        ar[i]=a;
+    }
+    sort(arr,arr+n);
+    reverse(arr,arr+n);
+    for(i=0 ; i<n ; i++)
+    {
+        if(ar[i]!=arr[i])
+        {
+            kk=1;
+            break;
+        }
+    }
+    if(k==0 && kk==0) cout<<"maybe"<<endl;
+    else if(k==1)cout<<"rated"<<endl;
+    else cout<<"unrated"<<endl;
+    return 0;
+}
