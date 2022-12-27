@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,i,k=0,S1=0,S2=0;
+    string s,s1,s2;
+    cin>>n;
+    for(i=0 ; i<n ; i++)
+    {
+        cin>>s;
+        if(i==0)
+        {
+            s1=s;
+        }
+        if(s1!=s && k==0)
+        {
+            s2=s;
+            k=1;
+        }
+        if(s==s1)
+        {
+            S1++;
+        }
+        else
+        {
+            S2++;
+        }
+    }
+    if(S1>S2)cout<<s1;
+    else cout<<s2;
+    return 0;
+}
