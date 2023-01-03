@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long x,rem,p,k=1,cal=0;
+    cin>>x;
+    while(x!=0)
+    {
+        rem=x%10;
+        x=x/10;
+        p=9-rem;
+        if(rem==9 && x==0)
+        {
+            cal+=(9*k);
+        }
+        else if(p<=rem)
+        {
+            cal=cal+(k*p);
+            k=k*10;
+        }
+        else
+        {
+            cal=cal+(k*rem);
+            k=k*10;
+        }
+    }
+    cout<<cal;
+    return 0;
+}
