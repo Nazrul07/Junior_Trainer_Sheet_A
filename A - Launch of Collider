@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int x,i,k=-1,cal;
+    cin>>x;
+    int a[x];
+    string s;
+    cin>>s;
+    vector<int>v1;
+    for(i=0 ; i<x ; i++)
+    {
+        cin>>a[i];
+    }
+    for(i=0 ; i<x-1 ; i++)
+    {
+        if(s[i]=='R' && s[i+1]=='L')
+        {
+            k=i;
+            cal=(a[k]+a[k+1])/2;
+            v1.push_back(cal-a[k]);
+        }
+    }
+    if(k!=-1)
+    {
+        sort(v1.begin(),v1.end());
+        cout<<v1[0];
+    }
+    else cout<<"-1";
+    return 0;
+}
