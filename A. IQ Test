@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    char a[4][4];
+    int i,j;
+    char s;
+    for(i=0 ; i<4 ; i++)
+    {
+        for(j=0 ; j<4 ; j++)
+        {
+            cin>>a[i][j];
+        }
+    }
+    for(i=0 ; i<4 ; i++)
+    {
+        for(j=0 ; j<3 ; j++)
+        {
+            s=a[i][j];
+            if(a[i][j+1]==s)
+            {
+                if(i==0)
+                {
+                    if(a[i+1][j]==s || a[i+1][j+1]==s)
+                    {
+                        cout<<"YES";
+                        return 0;
+                    }
+                }
+                else if(i==3)
+                {
+                    if(a[i-1][j]==s || a[i-1][j+1]==s)
+                    {
+                        cout<<"YES";
+                        return 0;
+                    }
+                }
+                else
+                {
+                    if(a[i+1][j]==s || a[i-1][j]==s || a[i+1][j+1]==s || a[i-1][j+1]==s)
+                    {
+                        cout<<"YES";
+                        return 0;
+                    }
+                }
+            }
+        }
+    }
+    cout<<"NO";
+    return 0;
+}
